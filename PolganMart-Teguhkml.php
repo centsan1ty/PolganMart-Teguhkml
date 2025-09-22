@@ -17,3 +17,8 @@ for ($i = 0; $i < 5; $i++) {
     $jumlah[] = $qty;
     $total[]  = $harga_barang[$index] * $qty;
 }
+
+foreach ($beli as $key => $barang) {
+    echo $barang . " x " . $jumlah[$key] . " = Rp " . number_format($total[$key], 0, ',', '.') . "\n";
+    $grandtotal += $total[$key];
+}
